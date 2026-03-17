@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Восстановление торпедо в Калининграде | ТОРПЕДО•39 | 8 952 791-19-19</title>
+<meta name="description" content="Профессиональное восстановление торпедо после ДТП и повреждений в Калининграде. Выезд по области. Гарантия 12 месяцев.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0f;--bg2:#131316;--bg3:#1a1a1f;--card:#16161b;--line:#242429;--red:#e8002d;--red2:#ff1744;--text:#f0f0f2;--muted:#7a7a85;--r:12px;--r2:8px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;overflow-x:hidden;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%}
+.c{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* BADGE */
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,0,45,.12);border:1px solid rgba(232,0,45,.3);color:var(--red2);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red2);animation:pulse 1.8s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.4)}}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px}
+.tag.bad{background:rgba(232,0,45,.15);color:#ff4d6d}
+.tag.good{background:rgba(0,220,130,.12);color:#00dc82}
+
+/* REVEAL ANIMATION */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s,transform .65s}
+.reveal-l{opacity:0;transform:translateX(-32px);transition:opacity .65s,transform .65s}
+.reveal-r{opacity:0;transform:translateX(32px);transition:opacity .65s,transform .65s}
+.reveal.on,.reveal-l.on,.reveal-r.on{opacity:1;transform:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(13,13,15,.9);backdrop-filter:blur(20px);border-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-size:17px;font-weight:900;letter-spacing:-.02em}
+.nav-logo span{color:var(--red2)}
+.nav-links{display:flex;gap:36px}
+.nav-links a{font-size:13px;font-weight:600;color:var(--muted);background:var(--bg3);border:1px solid var(--line);padding:7px 16px;border-radius:100px;transition:color .2s,border-color .2s,background .2s}
+.nav-links a:hover{color:var(--text);border-color:rgba(0,220,130,.5);background:rgba(0,220,130,.07)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:15px;font-weight:800;transition:color .2s}
+.nav-phone:hover{color:var(--red2)}
+.btn-r{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:14px;font-weight:700;padding:10px 20px;border-radius:var(--r2);transition:background .2s,transform .15s}
+.btn-r:hover{background:var(--red2);transform:translateY(-1px)}
+
+/* HERO */
+.hero{min-height:auto;display:flex;align-items:center;padding:120px 0 48px;position:relative;overflow:hidden;border:3px solid rgba(0,220,130,.6) !important;border-radius:16px !important;box-shadow:0 0 32px 4px rgba(0,220,130,.18),inset 0 0 40px rgba(0,220,130,.04);margin:10px auto !important;max-width:1200px !important}
+.hero-bg{position:absolute;inset:0}
+.hero-bg::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 72% 50%,rgba(232,0,45,.07),transparent 68%)}
+.grid-overlay{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.3}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero-h1{font-size:clamp(2.8rem,5vw,70px);font-weight:900;letter-spacing:-.04em;line-height:1.02;margin:20px 0;-webkit-text-fill-color:transparent;background:linear-gradient(90deg,#ff1744,#ff6b35,#ffd600,#00e676,#2AABEE,#e040fb,#ff1744);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;animation:shimmer 4s linear infinite}
+.hero-h1 em{font-style:normal}
+.hero-desc{font-size:17px;color:var(--muted);max-width:500px;margin-bottom:36px;line-height:1.7}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);font-size:14px;font-weight:600;padding:10px 20px;border-radius:var(--r2);border:1px solid var(--line);transition:all .2s}
+.btn-outline:hover{border-color:var(--muted);background:var(--bg3)}
+.hero-stats{display:flex;gap:32px;padding-top:32px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hs .hs-n{font-size:26px;font-weight:900;letter-spacing:-.03em}
+.hs .hs-n span{color:var(--red2)}
+.hs .hs-l{font-size:12px;color:var(--muted);margin-top:2px}
+.vis{position:relative;display:flex;flex-direction:column;height:auto;align-self:flex-start;margin-right:-108px}
+.vis-ba{display:block;border-radius:16px;overflow:hidden;border:1.5px solid rgba(0,220,130,.35);box-shadow:0 0 40px rgba(0,220,130,.12),0 24px 60px rgba(0,0,0,.5);animation:glow-border 3s ease-in-out infinite;}
+.vis-side{position:relative}
+.vis-side img{width:100%;height:auto;display:block;border-radius:16px}
+.vis-divider{background:linear-gradient(to right,transparent 0%,rgba(0,220,130,.5) 25%,#00dc82 50%,rgba(255,214,0,.9) 75%,transparent 100%);position:relative;flex-shrink:0}
+.vis-divider::after{content:"↕";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--bg);border:2px solid rgba(0,220,130,.8);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#00dc82;line-height:36px;text-align:center;box-shadow:0 0 14px rgba(0,220,130,.5)}
+.vis-lbl{position:absolute;bottom:12px;left:12px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:6px;z-index:2}
+.vis-lbl-bad{background:rgba(232,0,45,.9);color:#fff}
+.vis-lbl-good{background:rgba(0,220,130,.9);color:#000}
+.vis-chip{background:var(--bg2);border:1px solid rgba(0,220,130,.3);border-radius:var(--r);padding:14px 20px;box-shadow:0 10px 30px rgba(0,0,0,.5);display:flex;gap:24px;align-items:center;justify-content:center}
+.vc-lbl{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.vc-val{font-size:20px;font-weight:900;letter-spacing:-.02em}
+.vc-sub{font-size:12px;color:var(--muted);margin-top:3px}
+
+/* BRANDS */
+.brands{padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.brands-inner{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
+.brand-chip{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:8px 16px;font-size:13px;font-weight:600;color:var(--muted)}
+.sep{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* SECTIONS */
+section{padding:88px 0}
+.s-lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red2);margin-bottom:10px}
+.s-h2{font-size:clamp(2rem,4vw,48px);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:14px}
+.s-h2 em{font-style:normal;-webkit-text-fill-color:transparent;background:linear-gradient(135deg,var(--red),#ff8a8a);-webkit-background-clip:text;background-clip:text}
+.s-p{font-size:16px;color:var(--muted);max-width:580px;line-height:1.7}
+.s-head{margin-bottom:52px}
+
+/* PROBLEMS */
+.probs-sec{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.prob-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.prob-card{background:var(--bg2);padding:36px 28px}
+.p-icon{width:44px;height:44px;background:rgba(232,0,45,.1);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:20px}
+.prob-card h3{font-size:17px;font-weight:800;margin-bottom:8px}
+.prob-card p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* PROCESS */
+.proc-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.proc-row::before{content:"";position:absolute;top:35px;left:12.5%;right:12.5%;height:1px;background:var(--line)}
+.proc-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 14px;position:relative;z-index:1}
+.proc-n{width:70px;height:70px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:var(--red2);margin-bottom:22px;flex-shrink:0}
+.proc-item h4{font-size:15px;font-weight:800;margin-bottom:7px}
+.proc-item p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* BEFORE / AFTER */
+.ba-sec{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ba-big{display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:var(--r);overflow:hidden;margin-bottom:36px}
+.ba-col{position:relative}
+.ba-col img{aspect-ratio:4/3;object-fit:cover;background:#1a1a20}
+.ba-col-lbl{position:absolute;top:16px;left:16px}
+.ba-col-foot{padding:18px 22px;background:var(--card);border-top:1px solid var(--line)}
+.ba-col-foot h4{font-size:14px;font-weight:700;margin-bottom:4px}
+.ba-col-foot p{font-size:13px;color:var(--muted)}
+.ba-pairs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+/* SHIMMER HERO H1 */
+@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* NAV max-width */
+nav{max-width:1200px !important;position:fixed;left:50%;transform:translateX(-50%);margin:10px auto !important}
+.ba-pair{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card)}
+.ba-pair-imgs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
+.ba-img{position:relative;overflow:hidden}
+.ba-img img{aspect-ratio:1;object-fit:cover;background:#1a1a20}
+.ba-img .tag{position:absolute;bottom:6px;left:6px;font-size:9px;padding:2px 7px}
+.ba-pair p{display:none}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.why-items{display:flex;flex-direction:column}
+.why-item{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
+.why-item:last-child{border-bottom:none}
+.wi-icon{width:42px;height:42px;background:rgba(232,0,45,.1);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-top:2px}
+.wi-h{font-size:15px;font-weight:800;margin-bottom:5px}
+.wi-p{font-size:14px;color:var(--muted);line-height:1.6}
+.why-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:32px;position:relative;overflow:hidden}
+.why-card::before{content:"";position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(232,0,45,.1),transparent 70%)}
+.wc-t{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.wc-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.wc-col{background:var(--bg3);border-radius:var(--r2);padding:14px}
+.wc-col.yes{border:1px solid rgba(232,0,45,.3)}
+.wc-col-h{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.wc-col-h.dim{color:var(--muted)}
+.wc-col-h.acc{color:var(--red2)}
+.wc-row{font-size:13px;color:var(--muted);padding:5px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px}
+.wc-row:last-child{border-bottom:none}
+.wc-row.hi{color:var(--text);font-weight:600}
+.wc-row::before{content:"";width:5px;height:5px;border-radius:50%;flex-shrink:0;background:var(--muted)}
+.wc-col.yes .wc-row::before{background:var(--red2)}
+
+/* REVIEWS */
+.revs-sec{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.rev-stars{display:flex;gap:3px;margin-bottom:14px}
+.rev-stars span{color:#ffb800;font-size:16px}
+.rev-text{font-size:15px;line-height:1.7;margin-bottom:18px;color:#d0d0d8}
+.rev-foot{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+.rev-av{width:38px;height:38px;border-radius:50%;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:var(--red2);flex-shrink:0}
+.rev-name{font-size:14px;font-weight:700}
+.rev-meta{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-size:15px;font-weight:700;gap:16px;transition:color .2s}
+.faq-q:hover{color:var(--red2)}
+.faq-icon{flex-shrink:0;width:22px;height:22px;background:var(--bg3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);transition:transform .25s,background .2s;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(232,0,45,.15);color:var(--red2)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-a{max-height:600px}
+.faq-a p{padding:0 24px 12px;font-size:15px;color:var(--muted);line-height:1.7}
+.faq-a p strong{color:var(--text);font-weight:700}
+.faq-a ul{padding:0 24px 12px 44px;list-style:disc}
+.faq-a ul li{font-size:14px;color:var(--muted);padding:2px 0;line-height:1.6}
+
+/* CTA */
+.cta-sec{background:var(--bg2);border-top:1px solid var(--line)}
+.cta-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:72px 64px;position:relative;overflow:hidden;text-align:center}
+.cta-box::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 50%,rgba(232,0,45,.06),transparent 65%)}
+.cta-box .s-h2{font-size:clamp(2rem,4vw,52px)}
+.cta-box .s-p{margin:0 auto 36px;font-size:17px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn-rl{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-size:16px;font-weight:700;padding:15px 28px;border-radius:var(--r);transition:all .2s}
+.btn-rl:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(232,0,45,.3)}
+.btn-wl{display:inline-flex;align-items:center;gap:10px;background:#2AABEE;color:#fff;font-size:16px;font-weight:700;padding:15px 28px;border-radius:var(--r);transition:all .2s}
+.btn-wl:hover{background:#1a9de0;transform:translateY(-2px)}
+.cta-note{margin-top:20px;font-size:13px;color:var(--muted)}
+
+/* FOOTER */
+footer{padding:36px 0;border-top:1px solid var(--line)}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot-brand{font-size:16px;font-weight:900;letter-spacing:-.02em}
+.foot-brand span{color:var(--red2)}
+.foot-info{font-size:13px;color:var(--muted);margin-top:4px}
+.foot-phone{font-size:20px;font-weight:900;letter-spacing:-.02em;transition:color .2s}
+.foot-phone:hover{color:var(--red2)}
+
+/* FLOAT */
+.floaters{position:fixed;right:18px;bottom:18px;z-index:200;display:flex;flex-direction:column;gap:10px}
+.fl{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}
+.fl:hover{transform:scale(1.1) translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.5)}
+.fl-call{background:var(--red)}
+.fl-wa{background:#2AABEE}
+
+/* HERO BENEFITS */
+.hero-benefits{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.hb-item{font-size:14px;font-weight:600;color:#7fdb8a;background:rgba(0,220,130,.08);border:1px solid rgba(0,220,130,.2);padding:5px 12px;border-radius:100px}
+.hero-resp{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* PRICES */
+.p-price{display:inline-block;margin-top:10px;font-size:14px;font-weight:800;color:var(--red2);background:rgba(232,0,45,.1);border:1px solid rgba(232,0,45,.2);padding:4px 12px;border-radius:var(--r2)}
+
+/* TRUST & SAVINGS */
+.trust-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;margin-bottom:4px}
+.trust-badge{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:8px 16px;font-size:13px;font-weight:600}
+.savings-badge{text-align:center;padding:12px 16px;background:rgba(232,0,45,.1);border:1px solid rgba(232,0,45,.25);border-radius:var(--r2);font-size:13px;font-weight:800;color:var(--red2);margin-top:14px;letter-spacing:.02em}
+
+/* GEO */
+.geo-sec{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.geo-chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 10px}
+.geo-chip{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r2);padding:8px 16px;font-size:13px;font-weight:600}
+.geo-note{font-size:15px;color:var(--red2);font-weight:700}
+
+/* REVIEW VERIFIED */
+.rev-verified{font-size:11px;color:#00dc82;margin-top:3px;font-weight:600}
+
+/* STICKY MOBILE CTA */
+.sticky-mob{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--bg2);border-top:1px solid var(--line);padding:10px 16px;gap:10px}
+.sticky-mob a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:var(--r2);font-size:15px;font-weight:700;min-height:44px}
+.sticky-mob .s-call{background:var(--red);color:#fff}
+.sticky-mob .s-tg{background:#2AABEE;color:#fff}
+
+/* RESPONSIVE — TABLET */
+@media(max-width:1100px){
+  .nav-links{display:none}
+  .hero-inner{grid-template-columns:1fr}
+  .vis{display:none}
+  .prob-grid{grid-template-columns:1fr 1fr}
+  .proc-row{grid-template-columns:1fr 1fr;gap:28px}
+  .proc-row::before{display:none}
+  .ba-pairs{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr 1fr}
+  .faq-wrap{grid-template-columns:1fr}
+  .cta-box{padding:48px 36px}
+}
+
+/* RESPONSIVE — MOBILE */
+@media(max-width:640px){
+  /* layout */
+  section{padding:48px 0}
+  body{padding-bottom:72px}
+  .c{padding:0 16px}
+
+  /* nav */
+  nav{padding:12px 0}
+  .nav-cta .nav-phone{display:none}
+  .btn-r{font-size:13px;padding:9px 16px}
+
+  /* hero */
+  .hero{padding:90px 0 40px !important}
+  .hero-h1{font-size:clamp(2.2rem,9vw,48px) !important;letter-spacing:-.03em}
+  .hero-desc{font-size:15px}
+  .hero-btns{flex-direction:column;gap:10px}
+  .hero-btns a{width:100%;justify-content:center;padding:14px 20px;font-size:15px}
+  .hero-benefits{gap:6px}
+  .hb-item{font-size:13px}
+
+  /* sections */
+  .s-h2{font-size:clamp(1.7rem,7vw,36px) !important}
+  .s-p{font-size:15px}
+
+  /* problems */
+  .prob-grid{grid-template-columns:1fr}
+  .prob-card{padding:24px 20px}
+
+  /* process */
+  .proc-row{grid-template-columns:1fr}
+  .proc-item{flex-direction:row;text-align:left;align-items:flex-start;gap:16px;padding:0 0 24px}
+  .proc-n{width:50px;height:50px;font-size:16px;flex-shrink:0;margin-bottom:0}
+
+  /* before/after */
+  .ba-big{grid-template-columns:1fr}
+  .ba-pairs{grid-template-columns:1fr}
+
+  /* why */
+  .wc-cols{grid-template-columns:1fr}
+  .wc-col.yes{order:-1}
+  .cta-box{padding:32px 18px}
+
+  /* reviews */
+  .rev-grid{grid-template-columns:1fr}
+
+  /* faq */
+  .faq-q{font-size:14px;padding:16px 18px}
+  .faq-a p,.faq-a ul{padding-left:18px;padding-right:18px}
+
+  /* cta */
+  .cta-btns{flex-direction:column}
+  .btn-rl,.btn-wl{width:100%;justify-content:center;font-size:15px}
+
+  /* footer */
+  .foot-inner{flex-direction:column;align-items:flex-start;gap:16px}
+
+  /* float/sticky */
+  .sticky-mob{display:flex}
+  .floaters{display:none}
+
+  /* brands */
+  .brands-inner{gap:6px}
+  .brand-chip{font-size:12px;padding:6px 12px}
+
+  /* geo chips */
+  .geo-chips{gap:6px}
+  .geo-chip{font-size:12px;padding:6px 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+<div class="c nav-inner">
+  <div class="nav-logo">ТОРПЕДО<span>&#x2022;</span>39</div>
+  <div class="nav-links">
+    <a href="#probs">Что восстанавливаем</a>
+    <a href="#proc">Как работаем</a>
+    <a href="#ba">Наши работы</a>
+    <a href="#faq">Вопросы</a>
+  </div>
+  <div class="nav-cta">
+    <a href="tel:+79527911919" class="nav-phone">8 952 791-19-19</a>
+    <a href="https://t.me/real1zator39" class="btn-r" target="_blank">Telegram</a>
+  </div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><div class="grid-overlay"></div></div>
+  <div class="c">
+    <div class="hero-inner">
+
+      <div class="reveal">
+        <h1 class="hero-h1">Восстановление<br>торпедо после<br><em>ДТП и повреждений</em></h1>
+        <p class="hero-desc">Профессиональный ремонт приборной панели в Калининграде и области.</p>
+        <div class="hero-benefits">
+          <span class="hb-item">&#10003; Выезд по всей области</span>
+          <span class="hb-item">&#10003; Гарантия 12 мес</span>
+          <span class="hb-item">&#10003; Экономия до 60%</span>
+        </div>
+        <div class="hero-btns">
+          <a href="tel:+79527911919" class="btn-r">&#128222;&nbsp;Позвонить сейчас</a>
+          <a href="https://t.me/real1zator39" class="btn-outline" target="_blank">&#9992;&#65039;&nbsp;Написать в Telegram</a>
+        </div>
+        <p class="hero-resp">&#8987; Ответ за 30 минут в рабочее время</p>
+      </div>
+
+      <div class="vis reveal-r">
+        <div class="vis-ba">
+          <div class="vis-side">
+            <img src="Новая папка/501.jpg" alt="Торпедо до и после восстановления">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<div class="brands">
+<div class="c"><div class="brands-inner">
+  <span class="sep">Работаем с:</span>
+  <span class="brand-chip">Toyota</span><span class="brand-chip">BMW</span>
+  <span class="brand-chip">Mercedes</span><span class="brand-chip">Volkswagen</span>
+  <span class="brand-chip">Hyundai / Kia</span><span class="brand-chip">Nissan</span>
+  <span class="brand-chip">Audi</span><span class="brand-chip">VAG</span><span class="brand-chip">Ford</span><span class="brand-chip">Lada</span><span class="brand-chip"></span>и другие марки</span>
+</div></div>
+</div>
+
+<!-- PROBLEMS -->
+<section class="probs-sec" id="probs">
+<div class="c">
+  <div class="s-head reveal">
+    <div class="s-lbl">Что восстанавливаем</div>
+    <h2 class="s-h2">Любые повреждения<br><em>торпедо и панели</em></h2>
+    <p class="s-p">Независимо от марки и типа повреждения — оценим по фото за 30 минут.</p>
+  </div>
+  <div class="prob-grid reveal">
+    <div class="prob-card"><div class="p-icon">&#128165;</div><h3>После ДТП</h3><p>Трещины, сколы, деформация пластика, оторванные фрагменты корпуса</p><span class="p-price">Цена по фото</span></div>
+    <div class="prob-card"><div class="p-icon">&#128293;</div><h3>Airbag сработал</h3><p>Разрыв крышки подушки, вырванные крепления, рваные швы</p><span class="p-price">Цена по фото</span></div>
+    <div class="prob-card"><div class="p-icon">&#9728;&#65039;</div><h3>Возраст и солнце</h3><p>Выгоревший и потрескавшийся пластик, липкость, облезание покрытия</p><span class="p-price">Цена по фото</span></div>
+    <div class="prob-card"><div class="p-icon">&#127777;&#65039;</div><h3>Пожар или залив</h3><p>Оплавленные детали, деформация от жара, следы коррозии и влаги</p><span class="p-price">Цена по фото</span></div>
+  </div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="proc">
+<div class="c">
+  <div class="s-head reveal" style="text-align:center">
+    <div class="s-lbl">Как мы работаем</div>
+    <h2 class="s-h2">4 шага к <em>готовой панели</em></h2>
+    <p class="s-p" style="margin:0 auto">Просто и прозрачно &#x2014; без лишних визитов.</p>
+  </div>
+  <div class="proc-row">
+    <div class="proc-item reveal"><div class="proc-n">01</div><h4>Пишете / звоните</h4><p>&#128247; Фото в Telegram &mdash; цена за 30 мин<br>&#128176; Без обязательств</p></div>
+    <div class="proc-item reveal" style="transition-delay:.1s"><div class="proc-n">02</div><h4>Выезжаем к вам</h4><p>&#128663; Бесплатный выезд по Калининграду<br>&#128230; Забираем панель сами<br>&#128295; Помощь с демонтажем</p></div>
+    <div class="proc-item reveal" style="transition-delay:.2s"><div class="proc-n">03</div><h4>Восстанавливаем</h4><p>&#8987; Ремонт ~2 недели<br>&#128247; Фото по запросу<br>&#9989; Оригинальные материалы</p></div>
+    <div class="proc-item reveal" style="transition-delay:.3s"><div class="proc-n">04</div><h4>Возвращаем</h4><p>&#128666; Привозим обратно<br>&#128064; Принимаете &mdash; оплачиваете<br>&#128737;&#65039; Гарантия 12 месяцев</p></div>
+  </div>
+</div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba-sec" id="ba">
+<div class="c">
+  <div class="s-head reveal">
+    <div class="s-lbl">Наши работы</div>
+    <h2 class="s-h2">До и после &#x2014;<br><em>результат говорит сам</em></h2>
+    <p class="s-p">До и после &mdash; результат говорит сам за себя.</p>
+  </div>
+  <div class="ba-big reveal">
+    <div class="ba-col">
+      <img src="Новая папка/501.jpg" alt="До">
+      <div class="ba-col-lbl"><span class="tag bad">ДО</span></div>
+      <div class="ba-col-foot"><h4>После срабатывания подушки</h4><p>Разорванная крышка airbag, вырванные крепления</p></div>
+    </div>
+    <div class="ba-col">
+      <img src="Новая папка/grok-image-21696fcb-e6e2-4578-8a2d-865464ef8656.png" alt="После">
+      <div class="ba-col-lbl"><span class="tag good">ПОСЛЕ</span></div>
+      <div class="ba-col-foot"><h4>Полное восстановление &#9989;</h4><p>Как с завода &mdash; следов ремонта не видно</p></div>
+    </div>
+  </div>
+  <div class="ba-pairs reveal">
+    <div class="ba-pair">
+      <div class="ba-pair-imgs">
+        <div class="ba-img"><img src="Новая папка/503.jpg" alt="До"><span class="tag bad">ДО</span></div>
+        <div class="ba-img"><img src="Новая папка/grok-image-c3c1e4ac-0678-4310-a13a-26cb861e01be.png" alt="После"><span class="tag good">ПОСЛЕ</span></div>
+      </div>
+      <p>BMW 5 Series &bull; 14 дней</p>
+    </div>
+    <div class="ba-pair">
+      <div class="ba-pair-imgs">
+        <div class="ba-img"><img src="Новая папка/505.jpg" alt="До"><span class="tag bad">ДО</span></div>
+        <div class="ba-img"><img src="Новая папка/grok-image-21696fcb-e6e2-4578-8a2d-865464ef8656.png" alt="После"><span class="tag good">ПОСЛЕ</span></div>
+      </div>
+      <p>Toyota Camry &bull; 12 дней</p>
+    </div>
+    <div class="ba-pair">
+      <div class="ba-pair-imgs">
+        <div class="ba-img"><img src="Новая папка/501.jpg" alt="До"><span class="tag bad">ДО</span></div>
+        <div class="ba-img"><img src="Новая папка/grok-image-c3c1e4ac-0678-4310-a13a-26cb861e01be.png" alt="После"><span class="tag good">ПОСЛЕ</span></div>
+      </div>
+      <p>Mercedes C-Class &bull; 16 дней</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+<div class="c">
+  <div class="why-grid">
+    <div class="reveal-l">
+      <div class="s-lbl">Почему выбирают нас</div>
+      <h2 class="s-h2">Ваша родная<br>панель &#x2014; <em>лучший выбор</em></h2>
+      <p class="s-p">Не нужно переплачивать и думать о перепрошивке.</p>
+      <div class="why-items" style="margin-top:36px">
+        <div class="why-item"><div class="wi-icon">&#128663;</div><div><div class="wi-h">Выезд по всей области</div><p class="wi-p">Калининград, Балтийск, Черняховск, Советск, Гурьевск, Зеленоградск, Светлогорск &mdash; бесплатно в радиусе 50 км</p></div></div>
+        <div class="why-item"><div class="wi-icon">&#128197;</div><div><div class="wi-h">~2 недели и готово</div><p class="wi-p">Чёткие сроки без «позвоните через месяц». Фотоотчёт каждые 3 дня по запросу</p></div></div>
+        <div class="why-item"><div class="wi-icon">&#128176;</div><div><div class="wi-h">Разумная стоимость</div><p class="wi-p">Обычно в 2&ndash;3 раза дешевле новой панели. Цена фиксируется в договоре &mdash; без доплат</p></div></div>
+        <div class="why-item"><div class="wi-icon">&#128274;</div><div><div class="wi-h">Оригинальный пробег</div><p class="wi-p">Родная панель &mdash; родной пробег. Никакой перекодировки и несовместимости</p></div></div>
+        <div class="why-item"><div class="wi-icon">&#128196;</div><div><div class="wi-h">Официально</div><p class="wi-p">Заключаем договор и акт приёма-передачи &mdash; гарантия 12 месяцев</p></div></div>
+        <div class="why-item"><div class="wi-icon">&#128247;</div><div><div class="wi-h">Фотоотчёт</div><p class="wi-p">Держим в курсе на каждом этапе &mdash; присылаем фото по запросу</p></div></div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <div class="why-card">
+        <div class="wc-t">Сравнение вариантов</div>
+        <div class="wc-cols">
+          <div class="wc-col">
+            <div class="wc-col-h dim">Купить новую</div>
+            <div class="wc-row">Дорого и долго</div>
+            <div class="wc-row">1&ndash;3 месяца</div>
+            <div class="wc-row">&#10060; Перекодировка</div>
+            <div class="wc-row">&#10060; Потеря пробега</div>
+            <div class="wc-row">&#10060; Несовместимость</div>
+            <div class="wc-row">&#10060; Самовывоз</div>
+          </div>
+          <div class="wc-col yes">
+            <div class="wc-col-h acc">Наше восстановление</div>
+            <div class="wc-row hi">Цена по фото</div>
+            <div class="wc-row hi">~2 недели</div>
+            <div class="wc-row hi">&#9989; Не нужно</div>
+            <div class="wc-row hi">&#9989; Пробег сохранён</div>
+            <div class="wc-row hi">&#9989; 100% совместимость</div>
+            <div class="wc-row hi">&#9989; Выезд включён</div>
+          </div>
+        </div>
+        <div class="savings-badge">&#128176; ЭКОНОМИЯ ДО 60% + СОХРАНЕНИЕ ПРОБЕГА</div>
+        <a href="tel:+79527911919" class="btn-r" style="width:100%;justify-content:center;padding:14px 20px;font-size:15px;border-radius:var(--r2);margin-top:14px;display:flex">Узнать стоимость</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="revs-sec">
+<div class="c">
+  <div class="s-head reveal" style="text-align:center">
+    <div class="s-lbl">Отзывы клиентов</div>
+    <h2 class="s-h2">Говорят те,<br><em>кто уже сделал</em></h2>
+  </div>
+  <div class="rev-grid reveal">
+    <div class="rev-card">
+      <div class="rev-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+      <p class="rev-text">&#171;Airbag сработал на Passat &#x2014; думал, всё. Ребята оценили по фото за полчаса, цена приятно удивила. Через 2 недели привезли как новую. Следов не видно.&#187;</p>
+      <div class="rev-foot"><div class="rev-av">А</div><div><div class="rev-name">Андрей К.</div><div class="rev-meta">VW Passat B8 &#x2022; Калининград</div><div class="rev-verified">&#9989; Отзыв подтверждён &#x2022; Март 2026</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+      <p class="rev-text">&#171;Живу в Советске &#x2014; приехали сами, забрали, через 13 дней вернули. Трещины после ДТП восстановили идеально. Муж не поверил, что это ремонт.&#187;</p>
+      <div class="rev-foot"><div class="rev-av">Е</div><div><div class="rev-name">Елена М.</div><div class="rev-meta">Toyota RAV4 &#x2022; Советск</div><div class="rev-verified">&#9989; Отзыв подтверждён &#x2022; Февраль 2026</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+      <p class="rev-text">&#171;BMW 5 после аварии &#x2014; дилер сказал 95 000 за новую. Здесь сделали за треть цены: крышка подушки и трещины по корпусу. Держали сроки чётко.&#187;</p>
+      <div class="rev-foot"><div class="rev-av">С</div><div><div class="rev-name">Сергей Р.</div><div class="rev-meta">BMW 5 Series &#x2022; Калининград</div><div class="rev-verified">&#9989; Отзыв подтверждён &#x2022; Январь 2026</div></div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="c">
+  <div class="faq-wrap">
+    <div class="reveal-l">
+      <div class="s-lbl">Частые вопросы</div>
+      <h2 class="s-h2">Отвечаем<br><em>честно</em></h2>
+      <p class="s-p">Остались вопросы &#x2014; пишите в Telegram, ответим быстро.</p>
+      <a href="https://t.me/real1zator39" class="btn-r" style="margin-top:28px;display:inline-flex" target="_blank">&#9992;&#65039;&nbsp;Написать в Telegram</a>
+    </div>
+    <div class="faq-list reveal-r">
+      <div class="faq-item"><div class="faq-q">Сколько стоит восстановление?<span class="faq-icon">+</span></div><div class="faq-a"><p>Цена зависит от объёма повреждений и марки авто.</p><p>&#128247; Пришлите фото &mdash; дадим точную цену за 30 минут. Цена фиксируется в договоре &mdash; без доплат.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Сколько займёт ремонт?<span class="faq-icon">+</span></div><div class="faq-a"><p>Около 2 недель. Если нужно быстрее &#x2014; скажите, постараемся подстроиться. Держим в курсе весь процесс.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Нужно везти к вам самому?<span class="faq-icon">+</span></div><div class="faq-a"><p>Нет. Выезжаем по всей Калининградской области &#x2014; забираем панель и привозим обратно после ремонта.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Можно ли ездить без торпедо?<span class="faq-icon">+</span></div><div class="faq-a"><p>Да. Панель снимается и ставится обратно &#x2014; пока она у нас, на машине ездить можно.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Есть ли гарантия?<span class="faq-icon">+</span></div><div class="faq-a"><p><strong>12 месяцев</strong> на работы и материалы. Заключаем договор и акт приёма-передачи.</p><p>&#9989; Принимаете работу при получении &mdash; всё нравится, тогда оплачиваете.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Как восстанавливают торпедо после airbag?<span class="faq-icon">+</span></div><div class="faq-a"><p>Это наша специализация: крышка подушки, швы, крепления, корпус. Результат &mdash; как с завода, следов ремонта не видно.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Какие материалы используете?<span class="faq-icon">+</span></div><div class="faq-a"><p>Оригинальный винил / кожзам / текстурированный пластик &mdash; идентичный заводскому.</p><p>&#127912; Цвет подбираем по каталогу или образцу. Текстура воссоздаётся 1:1 (зерно, рельеф, мягкость).</p></div></div>
+      <div class="faq-item"><div class="faq-q">Можно ли оплатить частями?<span class="faq-icon">+</span></div><div class="faq-a"><p>Предоплата <strong>30&ndash;50%</strong> для запуска заказа и закупки материала. Остаток &mdash; по готовности панели.</p><p>&#128179; Оплата: перевод на карту, СБП, безнал для юрлиц.</p></div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- GEO -->
+<section class="geo-sec">
+<div class="c">
+  <div class="s-head reveal" style="text-align:center">
+    <div class="s-lbl">&#128205; География работы</div>
+    <h2 class="s-h2">Работаем по всей<br><em>Калининградской области</em></h2>
+  </div>
+  <div class="geo-chips reveal">
+    <span class="geo-chip">Калининград</span>
+    <span class="geo-chip">Балтийск</span>
+    <span class="geo-chip">Черняховск</span>
+    <span class="geo-chip">Советск</span>
+    <span class="geo-chip">Гурьевск</span>
+    <span class="geo-chip">Зеленоградск</span>
+    <span class="geo-chip">Светлогорск</span>
+    <span class="geo-chip">Янтарный</span>
+    <span class="geo-chip">и другие города</span>
+  </div>
+  <p class="geo-note reveal">&#10145;&#65039; Бесплатный выезд в радиусе 50 км от Калининграда</p>
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-sec">
+<div class="c">
+  <div class="cta-box reveal">
+    <div class="s-lbl" style="margin-bottom:14px">Готовы начать?</div>
+    <h2 class="s-h2">Пришлите фото &#x2014;<br><em>ответ за 30 минут</em></h2>
+    <p class="s-p">Восстанавливаем торпедо после ДТП, airbag и возрастных повреждений.<br>Выезд по всей Калининградской области. Разумная цена. Гарантия.</p>
+    <div class="cta-btns">
+      <a href="tel:+79527911919" class="btn-rl">&#128222;&nbsp;8 952 791-19-19</a>
+      <a href="https://t.me/real1zator39" class="btn-wl" target="_blank">&#9992;&#65039;&nbsp;Telegram</a>
+    </div>
+    <div class="trust-badges">
+      <span class="trust-badge">&#127942; 7 лет опыта</span>
+      <span class="trust-badge">&#128196; Договор</span>
+      <span class="trust-badge">&#128737;&#65039; Гарантия 12 мес</span>
+      <span class="trust-badge">&#128247; Фотоотчёт</span>
+    </div>
+    <p class="cta-note">Калининград и вся область &#x2022; Выезд включён &#x2022; ~2 недели</p>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="c"><div class="foot-inner">
+  <div>
+    <div class="foot-brand">ТОРПЕДО<span>&#x2022;</span>39</div>
+    <div class="foot-info">Восстановление приборных панелей после ДТП и airbag</div>
+    <div class="foot-info">Калининград и вся Калининградская область &#x2022; 2026</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <a href="tel:+79527911919" class="foot-phone">8 952 791-19-19</a>
+    <a href="https://t.me/real1zator39" class="btn-r" target="_blank" style="font-size:13px;padding:8px 16px">&#9992;&#65039; Telegram</a>
+  </div>
+</div></div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-mob">
+  <a href="tel:+79527911919" class="s-call">&#128222; Позвонить</a>
+  <a href="https://t.me/real1zator39" class="s-tg" target="_blank">&#9992;&#65039; Telegram</a>
+</div>
+
+<!-- FLOAT BUTTONS -->
+<div class="floaters">
+  <a href="https://t.me/real1zator39" class="fl fl-wa" target="_blank" title="Telegram">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.41-.88.03-.24.37-.49 1.02-.75 3.98-1.73 6.64-2.87 7.97-3.43 3.79-1.58 4.58-1.85 5.09-1.86.11 0 .37.03.53.17.14.12.18.28.2.44-.02.06-.02.12-.03.19z"/></svg>
+  </a>
+  <a href="tel:+79527911919" class="fl fl-call" title="Позвонить">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  </a>
+</div>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);
+});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+},{threshold:.1});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const it=q.parentElement;
+    const was=it.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!was)it.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
